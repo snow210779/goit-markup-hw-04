@@ -179,7 +179,19 @@ margin-left: auto;
 }
 .link-title{
 flex-basis: calc((100%-3*24px)/4);
-
+}
+.icon-title{
+width: 264px;
+height: 112px;
+border-radius: 4px;
+background: #F4F4FD;
+margin-bottom: 8px;
+display: flex;
+ align-items: center;
+justify-content: center;
+}
+.second-icon{
+    fill: #4D5AE5, #2E2F42;
 }
 .main-second-title{
         color:  #2E2F42;
