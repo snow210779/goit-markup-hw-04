@@ -1,5 +1,5 @@
 :root{
----accent-color:#434455;
+---hover-icon_color: #404bbf
 
 }
 
@@ -38,19 +38,16 @@ img{
 }
 
 
-/*------HEADER-------------*/
+/**------HEADER------------*/
 
 .header-container {
     display: flex;
+    padding: 24px 0 24px 0;
+    align-items: center;
+    border-bottom: 1px solid #e7e9fc;
 }
 
 .header-list {
-    display: flex;
-    gap: 40px;
-    
-}
-
-.social-list {
     display: flex;
     gap: 40px;
 }
@@ -70,6 +67,21 @@ img{
     color: #2e2f42  ;      
 }
 
+.header-item {
+    position: relative;
+}
+
+.header-item.current::after {
+    content: "";
+    border-radius: 2px;
+    width: 48px;
+    height: 4px;
+    background-color: var(---hover-icon_color); 
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+}
+
 .header-link {
     font-weight: 500;
     font-size: 16px;
@@ -78,12 +90,18 @@ img{
     color: #2e2f42;    
 }
 
-.social-link {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(---accent-color);    
+.header-link:is(:hover, :focus), 
+.social-link:is(:hover, :focus) {
+    color: var(---hover-icon_color);
+}
+
+.social-list {
+    display: flex;
+    gap: 40px;
+}
+
+.header-social {
+    margin-left: auto;
 }
 
 .social-link {
@@ -91,5 +109,130 @@ img{
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(---accent-color);
+    color: #434455;
 }
+
+/**------HERO------------*/
+
+.hero {
+    padding: 188px 0 188px 0;
+    background-color: #2e2f42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-title-box {
+    margin-bottom: 48px;
+}
+
+.hero-title {
+    max-width: 496px;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff; 
+    margin: 0 auto;
+}
+
+.hero-btn {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;  
+    border-radius: 4px;
+    width: 169px;
+    height: 56px; 
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: #4d5ae5; 
+    cursor: pointer; 
+    margin: 0 auto; 
+    transition-property:  background-color; 
+    transition-duration: 250ms; 
+    transition-timing-function:     cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.hero-btn:is(:hover, :focus) {
+    background-color: var(---hover-icon_color);
+}
+
+/**------ADVANTAGES------------*/
+
+.advantages {
+    padding: 120px 0 120px 0;
+}
+
+.advantages-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.advantages-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background-color: #f4f4fd;
+    margin-bottom: 8px;    
+}
+
+.advantages-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42; 
+    margin-bottom: 8px;   
+}
+
+.advantages-text {
+    max-width: 264px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;    
+}
+
+/**------FUNCTION------------*/
+
+.function {
+    padding-bottom: 120px;
+}
+
+.function-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    text-align: center;
+    color: #2e2f42;  
+    margin-bottom: 72px;  
+}
+
+.function-list {
+    display: flex;
+    gap: 24px;
+}
+
+.function-item {
+    width: calc( (100% - 48px) /3 );
+    border: 1px solid #e7e9fc;
+}
+
+
+
+
+
+
+
+
