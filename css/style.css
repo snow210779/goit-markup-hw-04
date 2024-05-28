@@ -231,6 +231,11 @@ img{
 
 /**------TEAM------------*/
 
+.team {
+    background-color:  #f4f4fd;
+    padding: 120px 0 120px 0;
+}
+
 .team-list {
     display: flex;
     gap: 24px;
@@ -238,10 +243,12 @@ img{
 
 .team-item {
     width: calc( (100% - 72px) / 4 );
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);        
 }
 
-.team-img {
-    margin-bottom: 32px;
+.team-name-social-box {
+    padding: 32px 0;
 }
 
 .team-title {
@@ -252,17 +259,6 @@ img{
     text-transform: capitalize;
     text-align: center;
     color: #2e2f42;    
-}
-
-.team-social-list {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.team-social-item {
-    width: calc( (100% - 72px) / 4);
 }
 
 .team-name {
@@ -284,6 +280,22 @@ img{
     margin-bottom: 8px;
 }
 
+.team-social-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.team-social-item {
+    width: calc( (100% - 72px) / 4);
+}
+
+.team-social-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .team-social-icon-box {
     width: 40px;
     height: 40px;
@@ -292,6 +304,9 @@ img{
     justify-content: center;align-items: center;
     border: none;
     border-radius: 50%;    
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-icon {
@@ -300,6 +315,18 @@ img{
 
 .team-social-icon-box:is(:hover, :focus) {
      background-color: #31d0aa;
+}
+
+/**----CUSTOMERS----*/
+
+.customers-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    text-align: center;
+    color: #2e2f42;    
 }
     
 
