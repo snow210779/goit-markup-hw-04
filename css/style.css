@@ -364,6 +364,9 @@ img{
     justify-content: center;
     align-items: center;
     color: #8E8F99;
+    transition-property: color, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon {
@@ -443,6 +446,10 @@ img{
     justify-content: center;
     border-radius: 50%;
     color: white;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .footer-icon {
@@ -553,6 +560,10 @@ background: #fff;
 
 /**-----PORTFOLIO-------*/
 
+.portfolio {
+    padding: 96px 0 120px;
+}
+
 
 .visually-hidden {
     position: absolute;
@@ -567,13 +578,64 @@ background: #fff;
     overflow: hidden;
 }
 
+.portfolio-btn-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
 .portfolio-btn {
+    display: block;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: center;
-    color: #4d5ae5;    
+    color: #4d5ae5; 
+    border: 1px solid #e7e9fc;
+    border-radius: 4px;
+    padding: 12px 24px; 
+    margin-bottom: 72px;  
+    cursor: pointer; 
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);   
+}
+
+.portfolio-btn:is(:hover, :focus) {
+    color: var(---hover-icon_color);
+    border: 1px solid transparent;
+}
+
+.portfolio-app-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.portfolio-app-item {
+    width: calc( (100% - 48px) /3 );
+}
+
+.portfolio-app-name {
+    padding: 32px 16px;
+}
+
+.portfolio-app-name-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
+}
+
+.portfolio-app-name-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
 }
 
 
