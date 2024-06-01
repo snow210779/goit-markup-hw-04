@@ -616,6 +616,36 @@ background: #fff;
 
 .portfolio-app-item {
     width: calc( (100% - 48px) /3 );
+    
+}
+
+.portfolio-app-link {
+    display: block;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-app-link {
+    position: relative; 
+    overflow: hidden; 
+    
+}
+
+.portfolio-app-cover-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    background-color:  #4d5ae5;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    padding: 40px 32px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-app-cover:hover .portfolio-app-cover-text {
+    transform: translateY(0);
 }
 
 .portfolio-app-name {
@@ -637,6 +667,8 @@ background: #fff;
     letter-spacing: 0.02em;
     color: #434455;
 }
+
+
 
 
 
