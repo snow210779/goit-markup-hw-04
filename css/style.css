@@ -805,6 +805,7 @@ background: #fff;
 .modal-btn-close:is(:hover, :focus) {
     background-color: var(---hover-icon_color);
     border: none;
+    fill: white;
 }
 
 .modal-icon {
@@ -812,9 +813,6 @@ background: #fff;
 
 }
 
-.modal-icon:is(:hover, :focus) {
-     fill: white;
-}
 
 
 
