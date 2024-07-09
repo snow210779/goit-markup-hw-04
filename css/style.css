@@ -85,23 +85,19 @@ a {
   margin-right: 76px;
 }
 
-.navigation-item {
+.navigation-link {
   position: relative;
 }
 
-.current-navigation-link::after {
+.navigation-link.current::after {
   position: absolute;
   left: 0;
   bottom: -1px;
   content: "";
   border-radius: 2px;
-  width: 48px;
+  width: 100%;
   height: 4px;
   background-color: var(--accent-color);
-}
-
-.navigation-item > .current-navigation-link {
-  color: var(--accent-color);
 }
 
 .navigation-link {
@@ -112,10 +108,6 @@ a {
   color: #2e2f42;
   padding: 24px 0;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.navigation-link:is(:hover, :focus) {
-  color: var(--accent-color);
 }
 
 .address {
@@ -131,7 +123,9 @@ a {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address-link:is(:hover, :focus) {
+.navigation-link:is(:hover, :focus),
+.address-link:is(:hover, :focus),
+.navigation-link.current {
   color: var(--accent-color);
 }
 
